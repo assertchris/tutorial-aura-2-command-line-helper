@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+
+include("vendor/autoload.php");
+
+use Aura\Cli\CliFactory;
+use Formativ\Dot\Factory;
+
+$cliFactory = new CliFactory();
+
+$helperFactory = new Factory(
+  $cliFactory->newContext($GLOBALS),
+  $cliFactory->newStdio()
+);
+
+$command = $helperFactory->create();
+
+if ($command) {
+  $command->attach();
+  $command->handle();
+}

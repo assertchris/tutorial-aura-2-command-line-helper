@@ -1,0 +1,17 @@
+{
+  "name"    : "formativ/dot",
+  "authors" : [
+    {
+      "name"  : "Christopher Pitt",
+      "email" : "cgpitt@gmail.com"
+    }
+  ],
+  "require" : {
+    "aura/cli" : "2.*@dev"
+  },
+  "autoload" : {
+    "psr-4" : {
+      "Formativ\\Dot\\" : "source/"
+    }
+  }
+}
